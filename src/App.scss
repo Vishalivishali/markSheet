@@ -1,7 +1,52 @@
 .App {
 	text-align: center;
+	background-color: pink;
+};
 
-	button {
-		font-weight: bold;
-	}
+.titleStyle {
+	text-align: center;
+	font-size: 15pz;
+	color: black;
+	margin: auto;
+	text-transform: uppercase;
+};
+
+.headerStyle {
+	border:3px solid black;
+	margin: auto;
+	padding-left: 74px;
+};
+
+.textStyle {
+	background: pink;
+	border: 3px solid black;
+	font-size: 20px;
+	height: 20px;
+	width: 60;
+	padding-right: 4px;
+	text-align: left;
+	color: black;
+};
+
+.tableStyle {
+	background: pink;
+	border: 3px solid black;
+	font-size: 20px;
+	height: 25px;
+	padding-right: 4px;
+	text-align: right;
+	font-weight: bold;
+	border-collapse: collapse;
+};
+
+.numberStyle {
+	background: pink;
+	border: 3px solid black;
+	font-size: 20px;
+	height: 20px;
+	width: 100px;
+	padding-right: 4px;
+	text-align: right;
+	color: black;
 }
+
