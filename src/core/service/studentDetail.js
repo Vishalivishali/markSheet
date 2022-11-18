@@ -18,12 +18,12 @@ const getResult = (student) =>
 		: 'Fail');
 
 const getRank = (students) => {
-	let rank = 0;
 	const sortedData = students.sort((a, b) => b.total - a.total);
-	// eslint-disable-next-line no-return-assign
+	let rank = 1;
+
 	const ranking = sortedData.map((student) => ({
 		...student,
-		rank: (student.result === 'Pass') ? rank += 1 : '-',
+		rank: student.result === 'Pass' ? rank++ : '-',
 	}));
 
 	return ranking;
