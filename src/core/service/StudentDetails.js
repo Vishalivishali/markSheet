@@ -41,4 +41,19 @@ const finalRank = (studentRecord) => {
 	return getRank(finalData);
 };
 
-export default finalRank;
+const getStudentsMark = () => ({
+	rollNo: 52,
+	name: 'B',
+	tamil: 92,
+	english: 21,
+	maths: 73,
+	science: 71,
+	social: 54,
+});
+
+const FinalMarkSheet = {
+	finalRank,
+	getStudentsMark,
+};
+
+export default FinalMarkSheet;

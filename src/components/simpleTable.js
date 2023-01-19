@@ -1,10 +1,9 @@
 import { React } from 'react';
 import markSheets from '../core/service/markSheet';
 import student from '../core/service/studentData';
-import addFields from '../core/service/studentDetail';
 import tableHeader from './TableHeader';
 import tableBody from './TableBody';
-
+import FinalMarkSheet from '../core/service/StudentDetails';
 // eslint-disable-next-line max-lines-per-function
 const SimpleTable = () =>
 	<div>
@@ -16,7 +15,7 @@ const SimpleTable = () =>
 				</tr>
 			</thead>
 			<tbody>
-				{addFields(markSheets).map(tableBody)}
+				{FinalMarkSheet.finalRank(markSheets).map(tableBody)}
 			</tbody>
 		</table>
 	</div>;
