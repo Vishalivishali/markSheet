@@ -1,7 +1,11 @@
 const getTotal = (student) => {
 	const { tamil, english, maths, science, social } = student;
 
-	return tamil + english + maths + science + social;
+	return Number(tamil)
+	+ Number(english)
+	+ Number(maths)
+	+ Number(science)
+	+ Number(social);
 };
 
 const passMark = 35;

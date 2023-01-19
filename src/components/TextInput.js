@@ -6,27 +6,23 @@ const TextInput = (context) => {
 	const { state, setState } = context;
 	const { currentMarkSheet } = state;
 
-	return <div className="rollNo">
-		{keys(currentMarkSheet).map((header, key) =>
-			<div key={ key }>
-				<label>{ header }</label>
-				<input
-					type="text"
-					placeholder="value"
-					onChange={ ({ target: { value }}) => setState({
-						...state,
-						currentMarkSheet: { ...currentMarkSheet,
-							rollNo: value,
-							name: value,
-							tamil: value,
-							english: value,
-							maths: value,
-							science: value,
-							social: value },
-					}) }
-				/>
-			</div>)}
-	</div>;
+	return (
+		<div>
+			{ keys(currentMarkSheet).map((header, key) =>
+				<span key={ key }>
+					<label>{ header }</label>
+					<input
+						type="text"
+						placeholder="value"
+						style={ { width: '100px', paddingRight: '30px' } }
+						onChange={ ({ target: { value }}) => setState({
+							...state,
+							currentMarkSheet: { ...currentMarkSheet,
+								[header]: value },
+						}) }
+					/>
+				</span>)}
+		</div>);
 };
 
 export default TextInput;

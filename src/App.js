@@ -4,10 +4,11 @@ import SimpleTable from './components/simpleTable';
 import finalMarkSheet from './core/service/StudentDetails';
 import TextInput from './components/TextInput';
 import markSheets from './core/service/markSheet';
+import AddButton from './components/AddButton';
 
 const getInitialState = (context) => ({
 	currentMarkSheet: finalMarkSheet.getStudentsMark(context),
-	studentMarkSheet: [...markSheets],
+	studentMarkSheet: markSheets,
 });
 
 const App = (context) => {
@@ -15,8 +16,9 @@ const App = (context) => {
 	const extendedContext = { ...{ ...context, state, setState }};
 
 	return <div className="App">
-		<SimpleTable { ...extendedContext }/>;
-		<TextInput { ...extendedContext }/>;
+		<SimpleTable { ...extendedContext }/>
+		<TextInput { ...extendedContext }/>
+		<AddButton { ...extendedContext }/>
 	</div>;
 };
 
